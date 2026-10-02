@@ -4,9 +4,9 @@ import csv
 import json
 import math
 import shlex
+from collections.abc import Iterable
 from dataclasses import asdict, dataclass
 from pathlib import Path
-from collections.abc import Iterable
 
 PHASES = {"P2", "P3"}
 TASKS = {"T1", "T2", "T3"}
