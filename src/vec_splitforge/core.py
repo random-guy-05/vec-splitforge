@@ -6,7 +6,7 @@ import math
 import shlex
 from dataclasses import asdict, dataclass
 from pathlib import Path
-from typing import Iterable
+from collections.abc import Iterable
 
 PHASES = {"P2", "P3"}
 TASKS = {"T1", "T2", "T3"}
