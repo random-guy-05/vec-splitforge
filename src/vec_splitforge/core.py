@@ -17,7 +17,7 @@ HELDOUT_GENOTYPES = {
 }
 
 
-def restriction_reason(item: "Item", phase: str) -> str | None:
+def restriction_reason(item: Item, phase: str) -> str | None:
     """Return a conservative rules-based reason this row should not be used."""
     phase = phase.upper()
     if phase not in PHASES:
@@ -54,11 +54,12 @@ def restriction_reason(item: "Item", phase: str) -> str | None:
                 f"E{lower:g} < stage < E8.0"
             )
 
-    if task == "T3" and condition in HELDOUT_GENOTYPES[phase]:
-        if 8.25 <= stage <= 9.25:
-            return (
-                f"T3 held-out genotype near E8.75: {condition}"
-            )
+    if (
+        task == "T3"
+        and condition in HELDOUT_GENOTYPES[phase]
+        and 8.25 <= stage <= 9.25
+    ):
+        return f"T3 held-out genotype near E8.75: {condition}"
 
     return None
 
