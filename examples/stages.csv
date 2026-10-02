@@ -1,0 +1,11 @@
+id,path,task,setting,stage,condition
+t1_e8_5,/data/t1/E8.5.h5ad,T1,,8.5,wt
+t1_e9_5,/data/t1/E9.5.h5ad,T1,,9.5,wt
+heart_e8_25,/data/t2/heart/E8.25.h5ad,T2,heart,8.25,wt
+heart_e8_75,/data/t2/heart/E8.75.h5ad,T2,heart,8.75,wt
+heart_e9_5,/data/t2/heart/E9.5.h5ad,T2,heart,9.5,wt
+embryo_e6_75,/data/t2/embryo/E6.75.h5ad,T2,embryo,6.75,wt
+embryo_e7_25,/data/t2/embryo/E7.25.h5ad,T2,embryo,7.25,wt
+embryo_e8_0,/data/t2/embryo/E8.0.h5ad,T2,embryo,8.0,wt
+t3_wt_e9_5,/data/t3/wt_E9.5.h5ad,T3,heart,9.5,wt
+t3_mab21l2_e9_5,/data/t3/mab21l2_E9.5.h5ad,T3,heart,9.5,mab21l2
