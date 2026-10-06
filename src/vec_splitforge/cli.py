@@ -76,6 +76,13 @@ def parser() -> argparse.ArgumentParser:
 
 def main(argv: list[str] | None = None) -> int:
     args = parser().parse_args(argv)
+    if args.phase == "P3":
+        print(
+            "WARNING: P3 has not started yet. The P3 guardrail is a "
+            "conservative preview based on the published split schedule; "
+            "recheck the official rules when P3 opens on 2026-10-20."
+        )
+
     items = load_manifest(args.manifest)
     problems = audit_manifest(
         items,
