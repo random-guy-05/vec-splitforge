@@ -15,7 +15,7 @@ It **does not copy data** and **does not know hidden answers**. It writes fold m
 
 ## Phase-aware leakage guard
 
-As of the 2026-10-01 source snapshot, P2 still withholds the official validation/test targets. SplitForge implements the **published protected stage windows**, not only exact labels: T1/heart extrapolation windows, T2 heart/embryo interpolation windows, and known T3 held-out genotypes. With `--phase P3`, SplitForge can preview the published final-phase split: released validation stages become usable while conservative windows remain around the still-hidden test targets. Until P3 actually opens on 20 October, that mode is explicitly labeled a preview and users should re-check the official rules at the phase transition.
+As of the 2026-10-05 source snapshot, P2 still withholds the official validation/test targets. SplitForge implements the **published protected stage windows**, not only exact labels: T1/heart extrapolation windows, T2 heart/embryo interpolation windows, and known T3 held-out genotypes. With `--phase P3`, SplitForge can preview the published final-phase split: released validation stages become usable while conservative windows remain around the still-hidden test targets. Until P3 actually opens on 20 October, that mode is explicitly labeled a preview and users should re-check the official rules at the phase transition.
 
 This is a **guardrail, not a legal determination**. The rules also cover alternative staging systems, other alleles and phenocopies that a CSV label cannot reliably infer. For ambiguous external data, ask the organisers as the official rules recommend.
 
