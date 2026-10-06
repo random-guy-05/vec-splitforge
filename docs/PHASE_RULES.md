@@ -14,9 +14,9 @@ SplitForge blocks measured manifest rows in the published protected windows:
 
 The released boundary stages themselves remain usable where the rules say they are released training data.
 
-## P3
+## P3 preview
 
-At P3 start, validation ground truth is released for retraining and the test targets remain hidden. SplitForge therefore allows the newly released validation stages and conservatively shifts protection to the remaining test side:
+P3 has not started yet. The rules and task pages say that validation ground truth will be released for retraining on 20 October while test targets remain hidden. The guardrail below is therefore a conservative preview of the published split structure, not a claim that every external-data boundary for P3 has already been finalized. SplitForge therefore allows the newly released validation stages and conservatively shifts protection to the remaining test side:
 
 - **T1:** E10.5 is usable; stages `E10.5 < stage <= E13.5` remain protected by the guardrail around hidden E12.5.
 - **T2 heart:** E10.5 is usable; stages `E10.5 < stage <= E13.5` remain protected around hidden E12.5.
