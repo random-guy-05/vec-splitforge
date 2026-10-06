@@ -54,12 +54,12 @@ def restriction_reason(item: Item, phase: str) -> str | None:
                 f"E{lower:g} < stage < E8.0"
             )
 
-    if (
-        task == "T3"
-        and condition in HELDOUT_GENOTYPES[phase]
-        and 8.25 <= stage <= 9.25
-    ):
-        return f"T3 held-out genotype near E8.75: {condition}"
+    if task == "T3" and condition in HELDOUT_GENOTYPES[phase]:
+        return (
+            "T3 known held-out genotype: "
+            f"{condition}; the official rules use biological "
+            "'comparable stage' rather than a numeric stage window"
+        )
 
     return None
 
