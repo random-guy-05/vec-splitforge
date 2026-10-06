@@ -106,3 +106,32 @@ def test_cli_shell_quotes_paths_with_spaces(tmp_path):
     score = (fold / "score.sh").read_text()
     assert "'/data/stage b.h5ad'" in score
     assert (fold / "score.sh").stat().st_mode & 0o111
+
+
+
+def test_cli_labels_p3_as_preview(tmp_path):
+    manifest = tmp_path / "stages.csv"
+    _manifest(
+        manifest,
+        [
+            ["a", "/data/a.h5ad", "T1", "", "8.5", "wt"],
+            ["b", "/data/b.h5ad", "T1", "", "9.5", "wt"],
+        ],
+    )
+    run = subprocess.run(
+        [
+            sys.executable,
+            "-m",
+            "vec_splitforge.cli",
+            "audit",
+            str(manifest),
+            "--phase",
+            "P3",
+        ],
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    assert run.returncode == 0
+    assert "P3 has not started yet" in run.stdout
+    assert "conservative preview" in run.stdout
