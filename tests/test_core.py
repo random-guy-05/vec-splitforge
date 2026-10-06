@@ -140,3 +140,13 @@ def test_manifest_schema_validation(tmp_path: Path):
         match="missing columns",
     ):
         load_manifest(path)
+
+
+
+def test_t3_known_heldout_genotype_is_blocked_without_invented_stage_window():
+    problems = audit_manifest(
+        [item("gata4_late", "T3", "heart", 12.0, "gata4")],
+        "P2",
+    )
+    assert problems
+    assert "known held-out genotype" in problems[0]
