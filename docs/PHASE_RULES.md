@@ -1,6 +1,6 @@
 # Phase and leakage rules implemented by SplitForge
 
-Snapshot date: **2026-10-01**. This file explains the guardrails in code; it is not a substitute for the official rules.
+Snapshot date: **2026-10-05**. This file explains the guardrails in code; it is not a substitute for the official rules.
 
 ## P2
 
